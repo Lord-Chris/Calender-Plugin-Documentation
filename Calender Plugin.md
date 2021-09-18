@@ -1,3 +1,18 @@
+<!-- 
+
+
+PLS READ!!
+Paste your documentation in the section created for you
+
+
+ -->
+
+
+
+
+
+
+
 # Zuri Calende Plugins (Calender Endpoints) (1.0.0)
 
 Download OPenApi specification: [Download](auth.4cf62435.yaml)
@@ -258,129 +273,52 @@ https://calender.zuri.chat/api/v1/delete_reminder/{reminder_id}
 
 
 
+# Standard Error Responses 
+The Authentication API may return the following HTTP Status Codes:
+
+---
+
+### **400**  An icorrect client request <br>
+
+```
+RESPONSE SCHEMA: application/json
+
+code required      integer <int32> 
+message required   string
+
+ ```
 
 
 
+### **401** Is the error that shows up because the request is unauthorized <br>
+
+```
+ RESPONSE SCHEMA:   application/json
+
+code required        integer <int32>
+message required     string
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Documentation for Create New User for User Endpoint
-
-- Endpoint: User
-- Method: Post
-- Description: Create new user.
-
-## Create a new user
-Creates a new user given a request body of required key-value pairs. Returns ID of created user.
-
-###### REQUEST BODY SCHEMA: application/json
-
-## Parameters:
-| Name | Data type |
-|--------|-------------|
-| First Name| string |
-| Last Name | string |
-| Phone_number| number |
-| Password| string |
-| Email| string |
-| Email_verified| boolean |
-
-## How to Create User
-| Click on sign up|   |
-|----------|---------|
-|Enter your First Name| *|
-|Enter your Last Name| *|
-|Phone_number| *|
-|Password| *|
-|Email| *|
-|Email_verified| *|
-
-> Note:  *  means required
-
-##### Url link
-[https://api.zuri.chat/users]
-
-> Note: There is a need for authentication. The responses are in JSON format,
-examples are given below
-
-### Responses with code description examples.
-
-``` sh
-Code: 201
- Description: Return Id of created user
- {
-"status": 200,
-"message": "user created",
-"data": {
-"InsertedID": "6137a5af52efebbea2739c71"
-}
-}
 ```
 
-``` sh
-Code: 401
- Description: Invalid User Mail
-{
-  "status": 400,
-  "message": "email address is not valid"
-}
+ ### **422** Server unable to process contained information e.g API behavior <br>
+
+```
+RESPONSE SCHEMA: application/json
+
+code required      integer <int32> 
+message required   string 
+
 ```
 
-``` sh
-Code: 422
- Description: Unprocessable entity
-  {
-"status": 422,
-"message": "EOF"
-}
+### **500** Comes up when internal server error occured during operation
+
 ```
 
-``` sh
-Code: 0
- Description: Default error response
-  {
-"status": 0,
-"message": "string"
-} (edited) 
+RESPONSE SCHEMA:     application/json
 
+code required         integer <int32>
+message required      string
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```
 
