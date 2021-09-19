@@ -252,7 +252,7 @@ These are ways to set up the end point to function properly:
 
 ## RESPONSES;
 
-### **200** Successfully <br>
+### **200** Successfull <br>
 
 ```sh
 {
